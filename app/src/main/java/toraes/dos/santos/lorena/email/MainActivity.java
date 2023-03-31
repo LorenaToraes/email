@@ -29,12 +29,12 @@ public class MainActivity extends AppCompatActivity {
                 EditText etAssunto = (EditText) findViewById(R.id.etAssunto);
                 String assunto = etAssunto.getText().toString();
                 EditText etTexto = (EditText) findViewById(R.id.etTexto);
-                String texto = etTexto.getText().toString();
+                String texto = etTexto.getText().toString(); // Retornando o texto por meio do id
 
                 Intent i = new Intent(Intent.ACTION_SENDTO); // Passando o parâmetro de ação para enviar para alguma pessoa
                 i.setData(Uri.parse("mailto:")); // Indicando que eu quero que respondandam pelo sendto e pela url ( mailto = relacionado a email)
-                String[] emails = new String[] {email};
-                i.putExtra(Intent.EXTRA_EMAIL, emails);
+                String[] emails = new String[] {email}; // Nova array de email
+                i.putExtra(Intent.EXTRA_EMAIL, emails); // O putExtra adicionan valores ao bundle interno da intent
                 i.putExtra(Intent.EXTRA_SUBJECT,assunto);
                 i.putExtra(Intent.EXTRA_TEXT,texto);
 
