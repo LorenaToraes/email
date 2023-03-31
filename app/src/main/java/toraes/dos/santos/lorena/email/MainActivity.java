@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Button btnEnviar = (Button) findViewById(R.id.btnEnviar);
-        //Definição da ação do click do botão
+        //Definição da ação do click do botão.
 
         btnEnviar.setOnClickListener(new View.OnClickListener() {
             @Override
